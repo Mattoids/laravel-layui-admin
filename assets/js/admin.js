@@ -20,12 +20,34 @@
     });
   };
 
-  Admin.prototype.tableDataDelete = function (url, th, isRefresh) {
-    layui.layer.confirm('你确认删除吗？', {
-      btn: ['删除', '取消']
+  Admin.prototype.tableDataDelete = function (url, th, isRefresh, massage = "你确认删除吗？") {
+    layui.layer.confirm(massage, {
+      btn: ['确认', '取消']
     }, function () {
       $.ajax({
         type: "DELETE",
+        url: url,
+        success: function() {
+          if (isRefresh) {
+            window.location = window.location.href
+            return false;
+          }
+          $(th).parent().parent().parent().remove();
+          layui.layer.close();
+          layui.layer.msg("删除成功", {time: 2000, icon: 6})
+        },
+      });
+    }, function () {
+      layui.layer.close();
+    });
+  };
+
+  Admin.prototype.tableDataEdit = function (url, th, method, isRefresh, massage = "确认要提交修改吗？") {
+    layui.layer.confirm(massage, {
+      btn: ['确认', '取消']
+    }, function () {
+      $.ajax({
+        type: method,
         url: url,
         success: function() {
           if (isRefresh) {
