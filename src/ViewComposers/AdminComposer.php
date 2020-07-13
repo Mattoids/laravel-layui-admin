@@ -12,6 +12,6 @@ class AdminComposer
 
     public function compose(View $view)
     {
-        $view->with("navigation", $this->permissionNavigationTree(config('layui.guard_name'), config('layui.type')));
+        $view->with("navigation", $this->permissionNavigationTree(config('admin.guard_name'), config('admin.menu_type')));
     }
 }

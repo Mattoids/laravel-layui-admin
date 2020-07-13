@@ -1,6 +1,9 @@
 <?php
 
 return [
+    // 菜单类型
+    'menu_type'  => 'admin',
+    'guard_name'    => 'admin',
 
     'navigation_type' => [
         'admin' => '后台系统'
