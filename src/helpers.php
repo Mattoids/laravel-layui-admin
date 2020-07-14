@@ -80,6 +80,6 @@ if (!function_exists("admin_enum_option_string")) {
 
 if (!function_exists("admin_user_can")) {
     function admin_user_can($permissionName) {
-        return auth()->guard("admin")->user()->can($permissionName);
+        return auth()->guard(config('admin.guard_name'))->user()->can($permissionName);
     }
 }

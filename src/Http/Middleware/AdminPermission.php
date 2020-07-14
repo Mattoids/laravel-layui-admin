@@ -18,7 +18,7 @@ class AdminPermission
     {
         $permission = Route::currentRouteName();
 
-        if (Auth::guard("admin")->user()->can($permission)) {
+        if (Auth::guard(config('admin.guard_name'))->user()->can($permission)) {
             return $next($request);
         }
 
