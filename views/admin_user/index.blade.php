@@ -26,7 +26,7 @@
     <div class="layui-card-body ">
         <script type="text/html" id="toolbar">
             <div class="layui-btn-container">
-                @if(admin_user_can("admin.user.create"))
+                @if(admin_user_can("admin-user.create"))
                     <a class="layui-btn layui-btn-sm" onclick="admin.openLayerForm('{{ route("admin-user.create") }}', '添加', 'POST', '500px', '350px')"><i class="layui-icon"></i>添加</a>
                 @endif
             </div>
@@ -57,15 +57,15 @@
                     <td>{{ $adminUser->created_at }}</td>
                     <td>{{ $adminUser->updated_at }}</td>
                     <td>
-                        @if(admin_user_can("admin.user.edit"))
+                        @if(admin_user_can("admin-user.edit"))
                             <a class="layui-btn layui-btn-xs"
                                 onclick="admin.openLayerForm('{{ route("admin-user.edit", ['admin_user' => $adminUser->id]) }}', '编辑', 'PATCH', '500px', '350px')">编辑</a>
                         @endif
-                        @if(admin_user_can("admin.user.assign.roles.form"))
+                        @if(admin_user_can("admin-user.assign-roles-form"))
                                 <a class="layui-btn layui-btn-xs"
                                    onclick="admin.openLayerForm('{{ route("admin-user.assign-roles-form", ['id' => $adminUser->id]) }}', '分配角色', 'PUT', '600px', '350px', true)">分配角色</a>
                         @endif
-                        @if(admin_user_can("admin.user.destroy"))
+                        @if(admin_user_can("admin-user.destroy"))
                                 <a class="layui-btn layui-btn-xs layui-btn-danger"
                                    onclick="admin.tableDataDelete('{{ route("admin-user.destroy", ['admin_user' => $adminUser->id]) }}', this)">删除</a>
                         @endif

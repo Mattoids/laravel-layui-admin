@@ -1,5 +1,5 @@
 <div class="layui-card-body ">
-    <form class="layui-form" action="{{ route("admin.change.password") }}" id="layer-form">
+    <form class="layui-form" action="{{ route("admin.change-password") }}" id="layer-form">
         <div class="layui-form-item">
             <label class="layui-form-label">密码</label>
             <div class="layui-input-block">

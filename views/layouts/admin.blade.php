@@ -67,7 +67,8 @@
 
     <div class="layui-footer">
         ©
-        <a href="" target="_blank">
+        <a href="https://github.com/moell-peng/laravel-layui-admin" target="_blank">
+            moell/laravel-layui-admin
         </a>
     </div>
 </div>

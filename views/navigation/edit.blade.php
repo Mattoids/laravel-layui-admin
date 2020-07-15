@@ -10,12 +10,8 @@
         <div class="layui-form-item">
             <label class="layui-form-label">上级菜单ID</label>
             <div class="layui-input-block">
-                <select name="parent_id" lay-verify="required">
-                    <option value="0"></option>
-                    @foreach($navigation_list as $val)
-                        <option value="{{ $val->id }}" @if($val->id == $navigation->parent_id) selected @endif>{{ $val->name }} [{{ $val->type }}]</option>
-                    @endforeach
-                </select>            </div>
+                <input type="text" name="parent_id" required value="{{ $navigation->parent_id }}"  lay-verify="required" placeholder="请输入名称" autocomplete="off" class="layui-input">
+            </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">URI</label>
