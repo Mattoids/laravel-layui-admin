@@ -5,7 +5,7 @@
 @section("breadcrumb")
     <div class="admin-breadcrumb">
          <span class="layui-breadcrumb">
-            <a href="{{ route("permission-group.index") }}">导航菜单</a>
+            <a href="{{ route("admin.permission.group.index") }}">导航菜单</a>
         </span>
     </div>
 @endsection
@@ -25,8 +25,8 @@
               <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
             </div>
             <div class="layui-inline layui-show-xs-block">
-                @if(admin_user_can("navigation.create"))
-                    <a class="layui-btn" onclick="admin.openLayerForm('{{ route("navigation.create") }}', '添加', 'POST', '700px', '500px')"><i class="layui-icon"></i>添加</a>
+                @if(admin_user_can("admin.navigation.create"))
+                    <a class="layui-btn" onclick="admin.openLayerForm('{{ route("admin.navigation.create") }}', '添加', 'POST', '700px', '500px')"><i class="layui-icon"></i>添加</a>
                 @endif
             </div>
         </form>
@@ -104,8 +104,8 @@
               title: '操作',
               align: 'center',
               template: function(item){
-                return '@if(admin_user_can("navigation.destroy"))<a lay-filter="delete">删除</a>   @endif ' +
-                        '@if(admin_user_can("navigation.edit"))<a  lay-filter="edit">编辑</a>@endif';
+                return '@if(admin_user_can("admin.navigation.destroy"))<a lay-filter="delete">删除</a>   @endif ' +
+                        '@if(admin_user_can("admin.navigation.edit"))<a  lay-filter="edit">编辑</a>@endif';
               }
             }
           ]

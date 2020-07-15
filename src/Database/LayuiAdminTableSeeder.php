@@ -143,7 +143,7 @@ class LayuiAdminTableSeeder extends Seeder
             'pg_id' => 3
         ],
         [
-            'name' => 'admin.navigation.index',
+            'name' => 'admin.navigation.list',
             'display_name' => '列表',
             'pg_id' => 4
         ],
@@ -359,7 +359,7 @@ class LayuiAdminTableSeeder extends Seeder
                 'parent_id' => 1,
                 'uri'       => '/admin/navigation',
                 'name'      => '导航菜单',
-                'permission_name' => 'admin.navigation.index',
+                'permission_name' => 'admin.navigation.list',
                 'icon'      => '',
                 'guard_name'=> "admin"
             ],

@@ -5,7 +5,7 @@
 @section("breadcrumb")
     <div class="admin-breadcrumb">
          <span class="layui-breadcrumb">
-            <a href="{{ route("admin-user.index") }}">角色</a>
+            <a href="{{ route("admin.admin.user.list") }}">角色</a>
         </span>
     </div>
 @endsection
@@ -33,8 +33,8 @@
     <div class="layui-card-body ">
         <script type="text/html" id="toolbar">
             <div class="layui-btn-container">
-                @if(admin_user_can("permission.create"))
-                <a class="layui-btn layui-btn-sm" onclick="admin.openLayerForm('{{ route("permission.create") }}', '添加', 'POST', '600px', '500px')"><i class="layui-icon"></i>添加</a>
+                @if(admin_user_can("admin.permission.create"))
+                <a class="layui-btn layui-btn-sm" onclick="admin.openLayerForm('{{ route("admin.permission.create") }}', '添加', 'POST', '600px', '500px')"><i class="layui-icon"></i>添加</a>
                 @endif
             </div>
         </script>
@@ -64,13 +64,13 @@
                     <td>{{ $permission->created_at }}</td>
                     <td>{{ $permission->updated_at }}</td>
                     <td>
-                        @if(admin_user_can("permission.edit"))
+                        @if(admin_user_can("admin.permission.edit"))
                             <a class="layui-btn layui-btn-xs"
-                                onclick="admin.openLayerForm('{{ route("permission.edit", ['permission' => $permission->id]) }}', '编辑', 'PATCH', '600px', '500px')">编辑</a>
+                                onclick="admin.openLayerForm('{{ route("admin.permission.edit", ['permission' => $permission->id]) }}', '编辑', 'PATCH', '600px', '500px')">编辑</a>
                         @endif
-                        @if(admin_user_can('permission.destroy'))
+                        @if(admin_user_can('admin.permission.destroy'))
                             <a class="layui-btn layui-btn-xs layui-btn-danger"
-                                onclick="admin.tableDataDelete('{{ route("permission.destroy", ['permission' => $permission->id]) }}', this)">删除</a>
+                                onclick="admin.tableDataDelete('{{ route("admin.permission.destroy", ['permission' => $permission->id]) }}', this)">删除</a>
                         @endif
                     </td>
                 </tr>

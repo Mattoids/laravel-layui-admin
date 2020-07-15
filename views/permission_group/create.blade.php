@@ -1,5 +1,5 @@
 <div class="layui-card-body ">
-    <form class="layui-form" method="post" action="{{ route("permission-group.store") }}" id="layer-form">
+    <form class="layui-form" method="post" action="{{ route("admin.permission.group.store") }}" id="layer-form">
         @csrf
         <div class="layui-form-item">
             <label class="layui-form-label">名称</label>

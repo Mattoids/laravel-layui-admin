@@ -11,7 +11,7 @@
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <a href="{{ route("admin.index") }}">
+        <a href="{{ route("admin.admin.list") }}">
             <div class="layui-logo">{{ config("admin.system_name") }}</div>
         </a>
         <!-- 头部区域（可配合layui已有的水平导航） -->
@@ -22,7 +22,7 @@
                     {{ auth("admin")->user()->name }}
                 </a>
                 <dl class="layui-nav-child">
-                    <dd><a onclick="admin.openLayerForm('{{ route("admin.change-password-form") }}', '修改密码', 'PATCH', '500px', '300px')">修改密码</a></dd>
+                    <dd><a onclick="admin.openLayerForm('{{ route("admin.change.password.form") }}', '修改密码', 'PATCH', '500px', '300px')">修改密码</a></dd>
                     <dd><a href="{{ route("admin.logout") }}">退出登录</a></dd>
                 </dl>
             </li>

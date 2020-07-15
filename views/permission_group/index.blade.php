@@ -5,7 +5,7 @@
 @section("breadcrumb")
     <div class="admin-breadcrumb">
          <span class="layui-breadcrumb">
-            <a href="{{ route("permission-group.index") }}">权限组</a>
+            <a href="{{ route("admin.permission.group.list") }}">权限组</a>
         </span>
     </div>
 @endsection
@@ -23,8 +23,8 @@
     <div class="layui-card-body ">
         <script type="text/html" id="toolbar">
             <div class="layui-btn-container">
-                @if(admin_user_can("permission-group.create"))
-                    <a class="layui-btn layui-btn-sm" onclick="admin.openLayerForm('{{ route("permission-group.create") }}', '添加', 'POST', '400px', '200px')"><i class="layui-icon"></i>添加</a>
+                @if(admin_user_can("admin.permission.group.create"))
+                    <a class="layui-btn layui-btn-sm" onclick="admin.openLayerForm('{{ route("admin.permission.group.create") }}', '添加', 'POST', '400px', '200px')"><i class="layui-icon"></i>添加</a>
                 @endif
             </div>
         </script>
@@ -44,13 +44,13 @@
                     <td>{{ $group->created_at }}</td>
                     <td>{{ $group->updated_at }}</td>
                     <td>
-                        @if(admin_user_can("permission-group.edit"))
+                        @if(admin_user_can("admin.permission.group.edit"))
                             <a class="layui-btn layui-btn-xs"
-                                onclick="admin.openLayerForm('{{ route("permission-group.edit", ['permission_group' => $group->id]) }}', '编辑', 'PATCH', '500px', '200px')">编辑</a>
+                                onclick="admin.openLayerForm('{{ route("admin.permission.group.edit", ['permission_group' => $group->id]) }}', '编辑', 'PATCH', '500px', '200px')">编辑</a>
                         @endif
-                        @if(admin_user_can("permission-group.destroy"))
+                        @if(admin_user_can("admin.permission.group.destroy"))
                             <a class="layui-btn layui-btn-xs layui-btn-danger"
-                               onclick="admin.tableDataDelete('{{ route("permission-group.destroy", ['permission_group' => $group->id]) }}', this)">删除</a>
+                               onclick="admin.tableDataDelete('{{ route("admin.permission.group.destroy", ['permission_group' => $group->id]) }}', this)">删除</a>
                         @endif
                     </td>
                 </tr>

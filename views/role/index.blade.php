@@ -5,7 +5,7 @@
 @section("breadcrumb")
     <div class="admin-breadcrumb">
          <span class="layui-breadcrumb">
-            <a href="{{ route("admin-user.index") }}">角色</a>
+            <a href="{{ route("admin.user.list") }}">角色</a>
         </span>
     </div>
 @endsection
@@ -23,8 +23,8 @@
     <div class="layui-card-body ">
         <script type="text/html" id="toolbar">
             <div class="layui-btn-container">
-                @if(admin_user_can("role.create"))
-                    <a class="layui-btn layui-btn-sm" onclick="admin.openLayerForm('{{ route("role.create") }}', '添加', 'POST', '500px', '350px')"><i class="layui-icon"></i>添加</a>
+                @if(admin_user_can("admin.role.create"))
+                    <a class="layui-btn layui-btn-sm" onclick="admin.openLayerForm('{{ route("admin.role.create") }}', '添加', 'POST', '500px', '350px')"><i class="layui-icon"></i>添加</a>
                 @endif
             </div>
         </script>
@@ -46,17 +46,17 @@
                     <td>{{ $role->created_at }}</td>
                     <td>{{ $role->updated_at }}</td>
                     <td>
-                        @if(admin_user_can("role.edit"))
+                        @if(admin_user_can("admin.role.edit"))
                             <a class="layui-btn layui-btn-xs"
-                               onclick="admin.openLayerForm('{{ route("role.edit", ['role' => $role->id]) }}', '编辑', 'PATCH', '500px', '350px')">编辑</a>
+                               onclick="admin.openLayerForm('{{ route("admin.role.edit", ['role' => $role->id]) }}', '编辑', 'PATCH', '500px', '350px')">编辑</a>
                         @endif
-                        @if(admin_user_can("role.assign-permissions-form"))
+                        @if(admin_user_can("admin.role.assign.permissions.form"))
                             <a class="layui-btn layui-btn-xs"
-                               href="{{ route("role.assign-permissions-form", ['id' => $role->id]) }}">分配权限</a>
+                               href="{{ route("admin.role.assign.permissions.form", ['id' => $role->id]) }}">分配权限</a>
                         @endif
-                        @if(admin_user_can("role.destroy"))
+                        @if(admin_user_can("admin.role.destroy"))
                             <a class="layui-btn layui-btn-xs layui-btn-danger"
-                               onclick="admin.tableDataDelete('{{ route("role.destroy", ['role' => $role->id]) }}', this)">删除</a>
+                               onclick="admin.tableDataDelete('{{ route("admin.role.destroy", ['role' => $role->id]) }}', this)">删除</a>
                         @endif
                     </td>
                 </tr>
