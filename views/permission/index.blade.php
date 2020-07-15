@@ -1,11 +1,11 @@
-@section("title", "角色")
+@section("title", "权限")
 
 @extends("admin::layouts.admin")
 
 @section("breadcrumb")
     <div class="admin-breadcrumb">
          <span class="layui-breadcrumb">
-            <a href="{{ route("admin-user.index") }}">角色</a>
+            <a href="{{ route("permission.index") }}">权限</a>
         </span>
     </div>
 @endsection

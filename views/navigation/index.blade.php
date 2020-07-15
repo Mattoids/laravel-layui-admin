@@ -5,7 +5,7 @@
 @section("breadcrumb")
     <div class="admin-breadcrumb">
          <span class="layui-breadcrumb">
-            <a href="{{ route("permission-group.index") }}">导航菜单</a>
+            <a href="{{ route("navigation.index") }}">导航菜单</a>
         </span>
     </div>
 @endsection
