@@ -89,23 +89,6 @@ password: secret
 * Layui
 * spatie/laravel-permission
 
-  
-
-## 打赏
-
-<p>
-  <img src="http://blog-image.moell.cn/alipay.jpg" width="250" />
-  <img src="http://blog-image.moell.cn/wepay.jpg" width="250" />
-</p>
-
-## 交流
-QQ群：339803849
-
-微信：扫码后拉入群
-<p>
-  <img src="http://blog-image.moell.cn/wx.jpg" width="250" />
-</p>
-
 ## License
 
 Apache License Version 2.0 see http://www.apache.org/licenses/LICENSE-2.0.html
