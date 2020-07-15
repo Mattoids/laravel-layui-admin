@@ -5,7 +5,7 @@
 @section("breadcrumb")
     <div class="admin-breadcrumb">
          <span class="layui-breadcrumb">
-            <a href="{{ route("admin.role.index") }}">角色</a>
+            <a href="{{ route("admin.role.list") }}">角色</a>
              <a><cite>分配权限</cite></a>
         </span>
     </div>

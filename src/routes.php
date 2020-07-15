@@ -10,7 +10,7 @@ $router->namespace('\Moell\LayuiAdmin\Http\Controllers')
         $router->post("login", "LoginController@login")->name("admin.login")->middleware('throttle:20,1');
 
         $router->middleware(['auth:admin'])->group(function($router) {
-            $router->get("/", "IndexController@index")->name("admin.list");
+            $router->get("/", "IndexController@index")->name("admin.index");
             $router->get("logout", "LoginController@logout")->name("admin.logout");
             $router->get("change-password", "ChangePasswordController@changePasswordForm")->name("admin.change.password.form");
             $router->patch("change-password", "ChangePasswordController@changePassword")->name("admin.change.password");

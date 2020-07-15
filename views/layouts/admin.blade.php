@@ -11,7 +11,7 @@
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <a href="{{ route("admin.admin.list") }}">
+        <a href="{{ route("admin.index") }}">
             <div class="layui-logo">{{ config("admin.system_name") }}</div>
         </a>
         <!-- 头部区域（可配合layui已有的水平导航） -->
