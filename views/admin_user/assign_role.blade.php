@@ -1,5 +1,5 @@
 <div class="layui-card-body ">
-    <form class="layui-form" method="post" action="{{ route("admin.user.assign.roles", ['id' => $adminUser->id]) }}" id="layer-form">
+    <form class="layui-form" method="post" action="{{ route("admin-user.assign-roles", ['id' => $adminUser->id]) }}" id="layer-form">
         @csrf
         @foreach($roles as $role)
             <div class="layui-col-sm4">
