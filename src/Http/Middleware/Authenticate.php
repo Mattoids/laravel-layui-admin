@@ -20,7 +20,7 @@ class Authenticate extends Middleware
         }
 
         if (in_array(config('admin.guard_name'), $this->guards)) {
-            return route("admin.login.show.form");
+            return route("admin.login-show-form");
         }
     }
 
